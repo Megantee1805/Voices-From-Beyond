@@ -4,6 +4,8 @@
 
 init offset = -1
 
+# init python:
+#     import playsound 
 
 ################################################################################
 ## Styles
@@ -244,7 +246,7 @@ screen quick_menu():
     if quick_menu:
 
         hbox:
-            style_prefix "quick"t
+            style_prefix "quick"
             xalign 0.5
             yalign 1.0
 
@@ -287,7 +289,7 @@ style quick_button_text:
 screen navigation():
     if renpy.get_screen("main_menu"):
         hbox:
-            style_prefix "navigation"
+            style_prefix "custom"
 
             xalign 0.5
             yalign 1.0
@@ -319,16 +321,16 @@ screen navigation():
 
             textbutton _("About") action ShowMenu("about")
 
-            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-                ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action ShowMenu("help")
+            #     ## Help isn't necessary or relevant to mobile devices.
+            #     textbutton _("Help") action ShowMenu("help")
 
-            if renpy.variant("pc"):
+            # if renpy.variant("pc"):
 
-                ## The quit button is banned on iOS and unnecessary on Android and
-                ## Web.
-                textbutton _("Quit") action Quit(confirm=not main_menu)
+            #     ## The quit button is banned on iOS and unnecessary on Android and
+            #     ## Web.
+            #     textbutton _("Quit") action Quit(confirm=not main_menu)
     else: 
         vbox:
             style_prefix "vnavigation"
@@ -377,7 +379,24 @@ style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
 style vnavigation_button is navigation_button
-style vnavigation_button_text is navigation_button_text
+style vnavigation_button_text is navigation_button
+
+style custom_button is navigation_button
+style custom_button_text is navigation_button
+
+style custom_button: 
+    background "#d8bfd8"
+    hover_background "#810281"
+    top_padding 50
+    bottom_padding 50
+    left_padding 50
+    right_padding 50
+    left_margin 100
+    right_margin 50
+
+
+style custom_button_text: 
+    size 50
 
 style navigation_button:
     size_group "navigation"
@@ -388,7 +407,6 @@ style navigation_button_text:
 
 style vnavigation_button_text:
     xalign 0.5
-
 
 ## Main Menu screen ############################################################
 ##
@@ -667,7 +685,7 @@ screen file_slots(title):
             ## The grid of file slots.
             grid gui.file_slot_cols gui.file_slot_rows:
                 style_prefix "slot"
-
+                
                 xalign 0.5
                 yalign 0.5
 
@@ -1461,7 +1479,6 @@ screen quick_menu():
 
         hbox:
             style_prefix "quick"
-
             xalign 0.5
             yalign 1.0
 

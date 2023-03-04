@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 289: reached end of line when expecting ':'.
-    if renpy.get_screen("main_menu")
-                                    ^
+File "game/screens.rpy", line 399: style property text_size is not known.
+    text_size 5
+             ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Mar  2 23:44:25 2023
+Sun Mar  5 02:18:23 2023

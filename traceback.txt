@@ -7,7 +7,7 @@ After initialization, but before game start.
     __update()
   File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
     renpy.style.rebuild()
-Exception: style vnavigation_button is part of a loop of recursive styles (is one of its own parents).
+Exception: style navigation_button is part of a loop of recursive styles (is one of its own parents).
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -32,9 +32,9 @@ Full traceback:
   File "style.pyx", line 789, in renpy.style.build_styles
   File "style.pyx", line 680, in renpy.style.build_style
   File "style.pyx", line 671, in renpy.style.build_style
-Exception: style vnavigation_button is part of a loop of recursive styles (is one of its own parents).
+Exception: style navigation_button is part of a loop of recursive styles (is one of its own parents).
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 Voices From Beyond 1.0
-Thu Mar  2 23:44:43 2023
+Sun Mar  5 02:10:08 2023
