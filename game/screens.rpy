@@ -319,18 +319,18 @@ screen navigation():
 
                 textbutton _("Main Menu") action MainMenu()
 
-            textbutton _("About") action ShowMenu("about")
+            # textbutton _("About") action ShowMenu("about")
 
             # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             #     ## Help isn't necessary or relevant to mobile devices.
             #     textbutton _("Help") action ShowMenu("help")
 
-            # if renpy.variant("pc"):
+            if renpy.variant("pc"):
 
-            #     ## The quit button is banned on iOS and unnecessary on Android and
-            #     ## Web.
-            #     textbutton _("Quit") action Quit(confirm=not main_menu)
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("Quit") action Quit(confirm=not main_menu)
     else: 
         vbox:
             style_prefix "vnavigation"
@@ -434,8 +434,8 @@ screen main_menu():
         hbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            # text "[config.name!t]":
+            #     style "main_menu_title"
 
             # text "[config.version]":
             #     style "main_menu_version"
