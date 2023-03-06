@@ -293,7 +293,7 @@ screen navigation():
 
             xalign 0.5
             yalign 1.0
-            yoffset -300
+            yoffset -200
 
             spacing gui.navigation_spacing
 
@@ -434,6 +434,9 @@ screen main_menu():
         hbox:
             style "main_menu_vbox"
 
+            image "logo_glow.png" yoffset -100 
+                # style "main_menu_title"
+
             # text "[config.name!t]":
             #     style "main_menu_title"
 
@@ -457,6 +460,9 @@ style main_menu_vbox:
     xmaximum 1200
     yalign 0.5
     yoffset -30
+
+# style main_menu_image: 
+#     properties gui.im
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)

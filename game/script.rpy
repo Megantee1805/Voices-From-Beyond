@@ -18,7 +18,7 @@ label start:
 
     scene bg room
 
-    play music "audio/Lily's room FLAC.flac"
+    play music "<loop 2>audio/Test.mp3"
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -30,7 +30,10 @@ label start:
 
     e "You've created a new Ren'Py game."
 
+    stop  music 
+
     e "Once you add a story, pictures, and music, you can release it to the world!"
+
 
     # This ends the game.
 
