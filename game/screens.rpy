@@ -333,7 +333,7 @@ screen navigation():
                 textbutton _("Quit") action Quit(confirm=not main_menu)
     else: 
         vbox:
-            style_prefix "vnavigation"
+            style_prefix "navigation"
 
             xpos gui.navigation_xpos
             yalign 0.5
@@ -377,9 +377,6 @@ screen navigation():
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
-
-style vnavigation_button is navigation_button
-style vnavigation_button_text is navigation_button
 
 style custom_button is navigation_button
 style custom_button_text is navigation_button
@@ -496,7 +493,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
     frame:
         style "game_menu_outer_frame"
 
-        vbox:
+        hbox:
 
             ## Reserve space for the navigation section.
             frame:
@@ -692,7 +689,7 @@ screen file_slots(title):
             grid gui.file_slot_cols gui.file_slot_rows:
                 style_prefix "slot"
                 
-                xalign 0.5
+                xfill 1
                 yalign 0.5
 
                 spacing gui.slot_spacing

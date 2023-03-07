@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 399: style property text_size is not known.
-    text_size 5
-             ^
+File "game/screens.rpy", line 300: Line is indented, but the preceding spacing statement does not expect a block. Please check this line's indentation.
+    textbutton _("Start") action Start()
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Mar  5 02:18:23 2023
+Wed Mar  8 00:46:30 2023
