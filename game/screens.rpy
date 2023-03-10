@@ -463,6 +463,7 @@ style main_menu_vbox:
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
+    background "#b023f208"
 
 style main_menu_title:
     properties gui.text_properties("title")
@@ -565,16 +566,19 @@ style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    # background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
     xsize 420
     yfill True
+    background "#4a0055ff"
 
 style game_menu_content_frame:
-    left_margin 60
-    right_margin 30
+    left_margin 20
+    right_margin 100
     top_margin 15
+    background Frame("#4b0a52ff", 25, 25)
+    # background "#4a0055ff"
 
 style game_menu_viewport:
     xsize 1380
@@ -594,10 +598,12 @@ style game_menu_label_text:
     color gui.accent_color
     yalign 0.5
 
+
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
-    yoffset -45
+    yoffset -50
+    color "#a03dbb00"
 
 
 ## About screen ################################################################
