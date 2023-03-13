@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 578: end of line expected.
-    background "#4b0a52ff" 25 25 25 25 
-                           ^
+File "game/screens.rpy", line 253: expected a keyword argument, colon, or end of line.
+    imagebutton "gui/button/auto.png" action Rollback()
+                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Mar 10 21:56:07 2023
+Mon Mar 13 22:17:26 2023

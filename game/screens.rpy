@@ -250,14 +250,14 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            imagebutton auto "gui/button/log_%s.png" action Rollback()
+            imagebutton auto "gui/button/menu_%s.png" action ShowMenu('history')
+            imagebutton auto "gui/button/skip_%s.png"action Skip() alternate Skip(fast=True, confirm=True)
+            imagebutton auto "gui/button/auto_%s.png" action Preference("auto-forward", "toggle")
+            imagebutton auto "gui/button/menu_%s.png" action ShowMenu('save')
+            imagebutton auto "gui/button/save_%s.png"  action QuickSave()
+            imagebutton auto "gui/button/load_%s.png" action QuickLoad()
+            imagebutton auto "gui/button/menu_%s.png"  action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -391,6 +391,8 @@ style custom_button:
     left_margin 100
     right_margin 50
 
+# style custom_textbutton:
+#     background  
 
 style custom_button_text: 
     size 50
@@ -463,7 +465,6 @@ style main_menu_vbox:
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
-    background "#b023f208"
 
 style main_menu_title:
     properties gui.text_properties("title")
@@ -487,9 +488,9 @@ screen game_menu(title, scroll=None, yinitial=0.0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
+        add Frame("#080026ff")
     else:
-        add gui.game_menu_background
+        add Frame("#080026ff")
 
     frame:
         style "game_menu_outer_frame"
@@ -543,7 +544,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
         action Return()
 
-    label title
+    label title 
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -565,7 +566,7 @@ style return_button_text is navigation_button_text
 style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
-
+    background Frame("gui/Rectangle_1.png")
     # background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
@@ -575,9 +576,8 @@ style game_menu_navigation_frame:
 
 style game_menu_content_frame:
     left_margin 20
-    right_margin 100
+    right_margin 20
     top_margin 15
-    background Frame("#4b0a52ff", 25, 25)
     # background "#4a0055ff"
 
 style game_menu_viewport:
@@ -592,18 +592,19 @@ style game_menu_side:
 style game_menu_label:
     xpos 75
     ysize 180
+    background "gui/button.png"
 
 style game_menu_label_text:
     size gui.title_text_size
     color gui.accent_color
-    yalign 0.5
-
+    # yalign 0.5
 
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
     yoffset -50
-    color "#a03dbb00"
+    background "gui/button.png"
+    # hover "gui/button_hover.png"
 
 
 ## About screen ################################################################
