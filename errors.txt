@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 253: expected a keyword argument, colon, or end of line.
-    imagebutton "gui/button/auto.png" action Rollback()
-                ^
+File "game/screens.rpy", line 617: style property hover is not known.
+    hover "gui/button/return_hover.png"
+         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Mar 13 22:17:26 2023
+Mon Mar 13 23:51:01 2023

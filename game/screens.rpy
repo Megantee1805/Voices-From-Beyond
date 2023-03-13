@@ -336,13 +336,14 @@ screen navigation():
             style_prefix "navigation"
 
             xpos gui.navigation_xpos
+            xoffset -40
             yalign 0.5
 
             spacing gui.navigation_spacing
 
             if main_menu:
 
-                textbutton _("Start") action Start()
+                textbutton _("Start") action Start() 
 
             else:
 
@@ -397,12 +398,20 @@ style custom_button:
 style custom_button_text: 
     size 50
 
+
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    hover_background "gui/sidemenu_hover.png"
+    top_margin 10
+    bottom_margin 10
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    xalign 0.5
+    xoffset -25
+    yoffset 10
+    size 55
 
 style vnavigation_button_text:
     xalign 0.5
@@ -487,10 +496,10 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     style_prefix "game_menu"
 
-    if main_menu:
-        add Frame("#080026ff")
-    else:
-        add Frame("#080026ff")
+    # if main_menu:
+    #     add Frame("#080026ff")
+    # else:
+    #     add Frame("#080026ff")
 
     frame:
         style "game_menu_outer_frame"
@@ -566,13 +575,13 @@ style return_button_text is navigation_button_text
 style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
-    background Frame("gui/Rectangle_1.png")
+    background Frame("gui/option_bg.png")
     # background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
     xsize 420
     yfill True
-    background "#4a0055ff"
+    # background "#4a0055ff"
 
 style game_menu_content_frame:
     left_margin 20
@@ -590,9 +599,10 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
+    xpos 120
     ysize 180
-    background "gui/button.png"
+    yoffset 60
+    # background "gui/button.png"
 
 style game_menu_label_text:
     size gui.title_text_size
@@ -602,10 +612,15 @@ style game_menu_label_text:
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
-    yoffset -50
-    background "gui/button.png"
-    # hover "gui/button_hover.png"
+    yoffset -100
+    background "gui/button/return_idle.png"
+    hover_background "gui/button/return_hover.png"
 
+style return_button_text:
+    # size 40
+    xalign 0.5
+    xoffset -50
+    yoffset 25
 
 ## About screen ################################################################
 ##
