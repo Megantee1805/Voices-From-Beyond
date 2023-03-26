@@ -336,7 +336,7 @@ screen navigation():
             style_prefix "navigation"
 
             xpos gui.navigation_xpos
-            xoffset -40
+            # xoffset -40
             yalign 0.5
 
             spacing gui.navigation_spacing
@@ -398,23 +398,20 @@ style custom_button:
 style custom_button_text: 
     size 50
 
-
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
     hover_background "gui/sidemenu_hover.png"
     top_margin 10
+    xalign 0.5
     bottom_margin 10
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
     xalign 0.5
-    xoffset -25
+    xoffset 25
     yoffset 10
-    size 55
-
-style vnavigation_button_text:
-    xalign 0.5
+    size 35
 
 ## Main Menu screen ############################################################
 ##
@@ -464,10 +461,8 @@ style main_menu_frame:
 
 style main_menu_vbox:
     xalign 0.5
-    xoffset -30
     xmaximum 1200
     yalign 0.5
-    yoffset -30
 
 # style main_menu_image: 
 #     properties gui.im
@@ -600,27 +595,32 @@ style game_menu_side:
 
 style game_menu_label:
     xpos 120
-    ysize 180
-    yoffset 60
+    ysize 100
     # background "gui/button.png"
 
 style game_menu_label_text:
     size gui.title_text_size
     color gui.accent_color
-    # yalign 0.5
+    # xalign 0.5
+    xoffset -20
+    yoffset 50
+    yalign 0.5
 
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
     yoffset -100
+    xoffset 75
     background "gui/button/return_idle.png"
     hover_background "gui/button/return_hover.png"
 
 style return_button_text:
-    # size 40
+    size 40
     xalign 0.5
-    xoffset -50
-    yoffset 25
+    xoffset 30
+    yalign 1.0
+    yoffset 30
+
 
 ## About screen ################################################################
 ##

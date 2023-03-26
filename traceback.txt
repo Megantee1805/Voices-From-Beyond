@@ -1,72 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 35, in script
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-  File "game/screens.rpy", line 241, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 241, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 246, in execute
-    if quick_menu:
-  File "game/screens.rpy", line 248, in execute
-    hbox:
-  File "game/screens.rpy", line 254, in execute
-    imagebutton auto "gui/button/menu_%s.png" action ShowMenu('history')
-Exception: Imagebutton does not have a idle image. (auto='gui/button/menu_%s.png').
+  File "game/script.rpy", line 467, in script
+    dog "Yip!"
+Exception: Sayer 'dog' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 35, in script
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\character.py", line 1266, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\character.py", line 927, in do_display
-    display_say(who,
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\character.py", line 666, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 241, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 241, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 246, in execute
-    if quick_menu:
-  File "game/screens.rpy", line 248, in execute
-    hbox:
-  File "game/screens.rpy", line 254, in execute
-    imagebutton auto "gui/button/menu_%s.png" action ShowMenu('history')
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\ui.py", line 952, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\ui.py", line 946, in choice
-    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
-Exception: Imagebutton does not have a idle image. (auto='gui/button/menu_%s.png').
+  File "game/script.rpy", line 467, in script
+    dog "Yip!"
+  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Megan\Desktop\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'dog' is not defined.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.0.3.22090809
 Voices From Beyond 1.0
-Mon Mar 13 22:31:38 2023
+Sun Mar 26 22:37:54 2023
